@@ -27,13 +27,27 @@ const homeView = `
 				</div>
 			</div>
 			<div class="hero-portrait-wrap">
-				<div class="portrait-frame"><img class="hero-portrait" src="profile_picture.png" alt="Santiago Eusse Gil, Desarrollador DevSecOps Semi Senior"></div>
+				<div class="portrait-frame"><img class="hero-portrait" src="assets/profile_picture.png" alt="Santiago Eusse Gil, Desarrollador DevSecOps Semi Senior"></div>
 			</div>
 		</div>
 		<div class="home-lower-content container">
 			<div class="home-divider" aria-hidden="true"></div>
 			<section class="featured-projects" aria-labelledby="featured-projects-title">
 				<h2 id="featured-projects-title">Proyectos destacados</h2>
+				<div class="featured-projects-grid">
+					<a class="featured-project" href="https://github.com/eusse701sg/Implementacion-Loteria" target="_blank" rel="noopener noreferrer">
+						<img src="assets/loteria/Loteria1.png" alt="Vista de Implementación Lotería">
+						<span><strong>Implementación Lotería</strong><small>Python · Django</small></span>
+					</a>
+					<a class="featured-project" href="https://github.com/eusse701sg/CamaraDelTiempo" target="_blank" rel="noopener noreferrer">
+						<img src="assets/camara/Camara1.png" alt="Vista de Cámara del Tiempo">
+						<span><strong>Cámara del Tiempo</strong><small>React · TypeScript</small></span>
+					</a>
+					<a class="featured-project" href="https://github.com/eusse701sg/Sportex" target="_blank" rel="noopener noreferrer">
+						<img src="assets/sportex/sportex1.png" alt="Vista de Sportex">
+						<span><strong>Sportex</strong><small>Python · Flet</small></span>
+					</a>
+				</div>
 			</section>
 		</div>
 	</section>`;
@@ -179,10 +193,84 @@ const experienceView = `
 	</section>`;
 
 const projectsView = `
-	<section class="page-section" aria-labelledby="projects-title">
-		<div class="container placeholder-inner">
-			<h1 id="projects-title">Proyectos</h1>
-			<p class="hero-intro">Esta vista está preparada para presentar proyectos, resultados y aprendizajes.</p>
+	<section class="projects-page" aria-labelledby="projects-title">
+		<div class="container projects-layout">
+			<header class="projects-heading">
+				<p class="eyebrow">Trabajo seleccionado</p>
+				<h1 id="projects-title">Proyectos</h1>
+			</header>
+
+			<div class="projects-grid">
+				<article class="project-card">
+					<div class="project-gallery">
+						<div class="project-visual project-visual-lottery"><img src="assets/loteria/Loteria1.png" alt="Interfaz principal del sistema de gestión de números de lotería"></div>
+						<button class="gallery-toggle" type="button" aria-expanded="false">Ver todas las imágenes <span aria-hidden="true">&#8595;</span></button>
+						<div class="project-gallery-list" aria-label="Galería de Implementación Lotería">
+							<img src="assets/loteria/Loteria1.png" alt="Pantalla de inicio de Implementación Lotería">
+							<img src="assets/loteria/Loteria2.png" alt="Pantalla de registro de números de lotería">
+							<img src="assets/loteria/Loteria3.png" alt="Pantalla de consulta de números de lotería">
+							<img src="assets/loteria/Loteria4.png" alt="Pantalla adicional del sistema de lotería">
+						</div>
+					</div>
+					<div class="project-card-body">
+						<p class="project-index">01 <span>/</span> Django web app</p>
+						<h2>Implementación Lotería</h2>
+						<p class="project-description">Sistema web para administrar el ciclo completo de los números de lotería. Permite registrar nuevos números, consultar listados, actualizar información y eliminar registros mediante flujos definidos para el operador. El proyecto incorpora documentación de casos de uso, diagramas de secuencia y una suite de pruebas que cubre validaciones de modelo, formularios, vistas, integración y escenarios de seguridad.</p>
+						<div class="project-technologies" aria-label="Tecnologías de Implementación Lotería"><span>Python</span><span>Django</span><span>HTML</span><span>CSS</span></div>
+						<a class="project-link" href="https://github.com/eusse701sg/Implementacion-Loteria" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">&#8599;</span></a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-gallery">
+						<div class="project-visual project-visual-time"><img src="assets/camara/Camara1.png" alt="Pantalla principal de la aplicación Cámara del Tiempo"></div>
+						<button class="gallery-toggle" type="button" aria-expanded="false">Ver todas las imágenes <span aria-hidden="true">&#8595;</span></button>
+						<div class="project-gallery-list" aria-label="Galería de Cámara del Tiempo">
+							<img src="assets/camara/Camara1.png" alt="Pantalla de inicio de Cámara del Tiempo">
+							<img src="assets/camara/Camara2.png" alt="Pantalla de Cámara del Tiempo 2">
+							<img src="assets/camara/Camara3.png" alt="Pantalla de Cámara del Tiempo 3">
+							<img src="assets/camara/camara4.png" alt="Pantalla de Cámara del Tiempo 4">
+							<img src="assets/camara/camara5.png" alt="Pantalla de Cámara del Tiempo 5">
+							<img src="assets/camara/camara6.png" alt="Pantalla de Cámara del Tiempo 6">
+							<img src="assets/camara/camara7.png" alt="Pantalla de Cámara del Tiempo 7">
+							<img src="assets/camara/camara8.png" alt="Pantalla de Cámara del Tiempo 8">
+							<img src="assets/camara/camara9.png" alt="Pantalla de Cámara del Tiempo 9">
+							<img src="assets/camara/camara10.png" alt="Pantalla de Cámara del Tiempo 10">
+							<img src="assets/camara/camara11.png" alt="Pantalla de Cámara del Tiempo 11">
+							<img src="assets/camara/camara12.png" alt="Pantalla de Cámara del Tiempo 12">
+							<img src="assets/camara/camara13.png" alt="Pantalla de Cámara del Tiempo 13">
+						</div>
+					</div>
+					<div class="project-card-body">
+						<p class="project-index">02 <span>/</span> React application</p>
+						<h2>Cámara del Tiempo</h2>
+						<p class="project-description">Aplicación full stack orientada a la gestión de citas y a la creación de un espacio de concentración para sesiones de estudio. Su experiencia toma inspiración visual de Dragon Ball y permite organizar usuarios, reservas y acceso a las cámaras del tiempo. El frontend está construido con React, Vite y TypeScript, mientras que el backend trabaja con servicios conectados a MySQL.</p>
+						<div class="project-technologies" aria-label="Tecnologías de Cámara del Tiempo"><span>React</span><span>Vite</span><span>TypeScript</span><span>MySQL</span></div>
+						<a class="project-link" href="https://github.com/eusse701sg/CamaraDelTiempo" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">&#8599;</span></a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="project-gallery">
+						<div class="project-visual project-visual-sportex"><img src="assets/sportex/sportex1.png" alt="Pantalla principal y marca de la plataforma Sportex"></div>
+						<button class="gallery-toggle" type="button" aria-expanded="false">Ver todas las imágenes <span aria-hidden="true">&#8595;</span></button>
+						<div class="project-gallery-list" aria-label="Galería de Sportex">
+							<img src="assets/sportex/sportex1.png" alt="Pantalla de inicio de Sportex">
+							<img src="assets/sportex/sportex2.png" alt="Pantalla de Sportex 2">
+							<img src="assets/sportex/sportex3.png" alt="Pantalla de Sportex 3">
+							<img src="assets/sportex/sportex4.png" alt="Pantalla de Sportex 4">
+							<img src="assets/sportex/sportex5.png" alt="Pantalla de Sportex 5">
+						</div>
+					</div>
+					<div class="project-card-body">
+						<p class="project-index">03 <span>/</span> Local sports platform</p>
+						<h2>Sportex</h2>
+						<p class="project-description">Plataforma de escritorio que conecta a los aficionados con eventos, torneos y espacios deportivos cercanos. Sportex permite consultar, crear y gestionar eventos, filtrar actividades por ubicación y visualizar información estadística para apoyar la toma de decisiones. La solución combina una interfaz desarrollada con Flet, manejo de datos tabulares y análisis geoespacial mediante el ecosistema científico de Python.</p>
+						<div class="project-technologies" aria-label="Tecnologías de Sportex"><span>Python</span><span>Flet</span><span>Pandas</span><span>GeoPandas</span></div>
+						<a class="project-link" href="https://github.com/eusse701sg/Sportex" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">&#8599;</span></a>
+					</div>
+				</article>
+			</div>
 		</div>
 	</section>`;
 
@@ -227,6 +315,64 @@ const navigate = (path) => {
 };
 
 document.addEventListener('click', (event) => {
+	const galleryToggle = event.target.closest('.gallery-toggle');
+
+	if (galleryToggle) {
+		const gallery = galleryToggle.closest('.project-gallery');
+		const card = gallery.closest('.project-card');
+		const images = [...gallery.querySelectorAll('.project-gallery-list img')];
+		const modal = document.createElement('div');
+		modal.className = 'gallery-modal';
+		modal.setAttribute('role', 'dialog');
+		modal.setAttribute('aria-modal', 'true');
+		modal.setAttribute('aria-label', `Galería de ${card.querySelector('h2').textContent}`);
+		modal.innerHTML = `
+			<div class="gallery-modal-panel">
+				<div class="gallery-modal-header">
+					<h2>${card.querySelector('h2').textContent}</h2>
+					<button class="gallery-modal-close" type="button" aria-label="Cerrar galería">&times;</button>
+				</div>
+				<div class="gallery-modal-viewer">
+					<button class="gallery-modal-arrow gallery-modal-previous" type="button" aria-label="Imagen anterior">&#8592;</button>
+					<figure class="gallery-modal-figure">
+						<img class="gallery-modal-image" src="${images[0].src}" alt="${images[0].alt}">
+						<figcaption class="gallery-modal-caption">1 / ${images.length}</figcaption>
+					</figure>
+					<button class="gallery-modal-arrow gallery-modal-next" type="button" aria-label="Siguiente imagen">&#8594;</button>
+				</div>
+			</div>`;
+
+		document.body.append(modal);
+		document.body.classList.add('modal-open');
+		galleryToggle.setAttribute('aria-expanded', 'true');
+		modal.querySelector('.gallery-modal-close').focus();
+
+		let currentImageIndex = 0;
+		const modalImage = modal.querySelector('.gallery-modal-image');
+		const modalCaption = modal.querySelector('.gallery-modal-caption');
+		const updateModalImage = (index) => {
+			currentImageIndex = (index + images.length) % images.length;
+			modalImage.src = images[currentImageIndex].src;
+			modalImage.alt = images[currentImageIndex].alt;
+			modalCaption.textContent = `${currentImageIndex + 1} / ${images.length}`;
+		};
+
+		modal.querySelector('.gallery-modal-previous').addEventListener('click', () => updateModalImage(currentImageIndex - 1));
+		modal.querySelector('.gallery-modal-next').addEventListener('click', () => updateModalImage(currentImageIndex + 1));
+		modal._updateModalImage = updateModalImage;
+		return;
+	}
+
+	const closeButton = event.target.closest('.gallery-modal-close');
+	const modal = event.target.closest('.gallery-modal');
+
+	if (closeButton || (modal && event.target === modal)) {
+		modal.remove();
+		document.body.classList.remove('modal-open');
+		document.querySelectorAll('.gallery-toggle').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+		return;
+	}
+
 	const routeLink = event.target.closest('[data-route]');
 
 	if (!routeLink) {
@@ -235,6 +381,27 @@ document.addEventListener('click', (event) => {
 
 	event.preventDefault();
 	navigate(routeLink.getAttribute('href'));
+});
+
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'Escape') {
+		const modal = document.querySelector('.gallery-modal');
+
+		if (modal) {
+			modal.remove();
+			document.body.classList.remove('modal-open');
+			document.querySelectorAll('.gallery-toggle').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+		}
+	}
+
+	const modal = document.querySelector('.gallery-modal');
+
+	if (modal && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+		const direction = event.key === 'ArrowLeft' ? -1 : 1;
+		const currentCaption = modal.querySelector('.gallery-modal-caption').textContent;
+		const currentIndex = Number.parseInt(currentCaption.split(' ')[0], 10) - 1;
+		modal._updateModalImage(currentIndex + direction);
+	}
 });
 
 if (menuToggle && siteNavigation) {
