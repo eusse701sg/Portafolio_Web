@@ -9,7 +9,7 @@ const homeView = `
 			<div class="hero-copy">
 				<h1 id="hero-title">Santiago<br><span>Eusse Gil</span></h1>
 				<p class="hero-role">Desarrollador DevSecOps Semi Senior</p>
-				<p class="hero-intro">Construyo y mejoro plataformas de entrega de software seguras, automatizadas y confiables. Mi enfoque integra desarrollo, operaciones y seguridad para convertir ideas en productos sostenibles.</p>
+				<p class="hero-intro">Desarrollo y optimizo soluciones DevSecOps que integran automatización, seguridad y entrega continua. Me enfoco en construir pipelines eficientes y confiables, integrando desarrollo, operaciones y seguridad para llevar el software de la idea a producción con calidad y sostenibilidad.</p>
 				<div class="hero-actions" aria-label="Accesos principales">
 					<a class="button button-primary" data-route href="/proyectos">Ver proyectos <span aria-hidden="true">&#8599;</span></a>
 					<a class="button button-secondary" href="mailto:santiagoegla@gmail.com">Contactarme <span aria-hidden="true">&#8594;</span></a>
