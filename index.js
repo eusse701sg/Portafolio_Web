@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const siteNavigation = document.querySelector('.site-navigation');
 const navigationLinks = document.querySelectorAll('[data-route]');
 
-const x = :
+const x = ;
 
 const homeView = `
 	<section class="hero-section" aria-labelledby="hero-title">
