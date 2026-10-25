@@ -6,7 +6,7 @@ on: # Disparadores del flujo de trabajo
       - main
       - master
       - develop
-      - setup-githubActions
+      - seupt-githubActions
   pull_request: # Cuando se hace un pull request a las ramas main, master o develop
     branches:
       - main
