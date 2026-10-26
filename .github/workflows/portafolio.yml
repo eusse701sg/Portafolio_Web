@@ -76,9 +76,9 @@ jobs:
           trap 'rm -rf "$stylelint_dir"' EXIT
 
           npm install --prefix "$stylelint_dir" --no-save --no-package-lock \
-            stylelint@16.23.1 stylelint-config-standard@39.0.1
+            stylelint@16.23.1 stylelint-config-recommended@17.0.0
 
-          printf '{"extends":"stylelint-config-standard"}\n' \
+          printf '{"extends":"stylelint-config-recommended"}\n' \
             > "$stylelint_dir/stylelint.config.json"
 
           "$stylelint_dir/node_modules/.bin/stylelint" \
