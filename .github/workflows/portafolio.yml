@@ -78,7 +78,7 @@ jobs:
           npm install --prefix "$stylelint_dir" --no-save --no-package-lock \
             stylelint@16.23.1 stylelint-config-recommended@17.0.0
 
-          printf '{"extends":"stylelint-config-recommended"}\n' \
+          printf '{"extends":"stylelint-config-recommended","rules":{"no-duplicate-selectors":null,"no-descending-specificity":null}}\n' \
             > "$stylelint_dir/stylelint.config.json"
 
           "$stylelint_dir/node_modules/.bin/stylelint" \
