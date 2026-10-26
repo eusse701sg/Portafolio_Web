@@ -28,7 +28,59 @@ jobs:
           node-version: '24'
       
       - name: Validate HTML
-        run: npx --yes htmlhint@1.9.2 "**/*.html" 
+        shell: bash
+        run: |
+          mapfile -d '' html_files < <(find . -type f -name '*.html' \
+            -not -path '*/node_modules/*' \
+            -not -path '*/.git/*' \
+            -print0)
 
-      - name: Validate javascript Syntax
-        run: find . -type f -name "*.js" -not -path "./node_modules/*" -print0 | xargs -0 -r -n1 node --check
+          if ((${#html_files[@]} == 0)); then
+            echo "No HTML files found to validate."
+            exit 1
+          fi
+
+          npx --yes htmlhint@1.9.2 "${html_files[@]}"
+
+      - name: Validate JavaScript syntax
+        shell: bash
+        run: |
+          mapfile -d '' js_files < <(find . -type f -name '*.js' \
+            -not -path '*/node_modules/*' \
+            -not -path '*/.git/*' \
+            -print0)
+
+          if ((${#js_files[@]} == 0)); then
+            echo "No JavaScript files found to validate."
+            exit 1
+          fi
+
+          for file in "${js_files[@]}"; do
+            node --check "$file"
+          done
+
+      - name: Validate CSS
+        shell: bash
+        run: |
+          mapfile -d '' css_files < <(find . -type f -name '*.css' \
+            -not -path '*/node_modules/*' \
+            -not -path '*/.git/*' \
+            -print0)
+
+          if ((${#css_files[@]} == 0)); then
+            echo "No CSS files found to validate."
+            exit 1
+          fi
+
+          stylelint_dir="$(mktemp -d "$RUNNER_TEMP/stylelint.XXXXXX")"
+          trap 'rm -rf "$stylelint_dir"' EXIT
+
+          npm install --prefix "$stylelint_dir" --no-save --no-package-lock \
+            stylelint@16.23.1 stylelint-config-recommended@17.0.0
+
+          printf '{"extends":"stylelint-config-recommended","rules":{"no-duplicate-selectors":null,"no-descending-specificity":null}}\n' \
+            > "$stylelint_dir/stylelint.config.json"
+
+          "$stylelint_dir/node_modules/.bin/stylelint" \
+            --config "$stylelint_dir/stylelint.config.json" \
+            "${css_files[@]}"
